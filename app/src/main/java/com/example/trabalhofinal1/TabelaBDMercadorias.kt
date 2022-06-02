@@ -8,7 +8,7 @@ class TabelaBDMercadorias (val db: SQLiteDatabase) {
         db.execSQL("CREATE TABLE $NOME (${BaseColumns._ID} INTEGER PRIMARY KEY AUTOINCREMENT," +
                 " $CAMPO_NOME TEXT NOT NULL," +
                 " $CAMPO_TIPO TEXT NOT NULL,"+
-                " $CAMPO_PESO DATE NOT NULL," +
+                " $CAMPO_PESO TEXT NOT NULL," +
                 " $CAMPO_QUANTIDADE TEXT NOT NULL," +
                 " $CAMPO_VOLUME TEXT NOT NULL)")
     }
