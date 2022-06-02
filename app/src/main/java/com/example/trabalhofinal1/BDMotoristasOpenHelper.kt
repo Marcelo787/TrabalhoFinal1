@@ -4,12 +4,7 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
-class BDMotoristasOpenHelper (
-    context: Context?,
-    name: String?,
-    factory: SQLiteDatabase.CursorFactory?,
-    version: Int
-    ) : SQLiteOpenHelper(context, name, factory, version) {
+class BDMotoristasOpenHelper (context: Context?) : SQLiteOpenHelper(context, NOME, null, VERSAO) {
         /**
          * Called when the database is created for the first time. This is where the
          * creation of tables and the initial population of the tables should happen.
@@ -49,5 +44,10 @@ class BDMotoristasOpenHelper (
             TabelaBDMotorista(db).cria()
             TabelaBDMercadorias(db).cria()
             TabelaBDViagem(db).cria()
+        }
+
+        companion object {
+            const val NOME = "motorista.db"
+            private const val VERSAO = 1
         }
     }
