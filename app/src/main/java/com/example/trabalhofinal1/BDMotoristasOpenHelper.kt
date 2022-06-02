@@ -44,6 +44,8 @@ class BDMotoristasOpenHelper (
          * @param newVersion The new database version.
          */
         override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
+            requireNotNull(db)
 
+            TabelaBDMotorista(db).cria()
         }
     }
