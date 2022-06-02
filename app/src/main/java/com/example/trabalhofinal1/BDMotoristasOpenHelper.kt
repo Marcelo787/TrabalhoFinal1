@@ -18,6 +18,7 @@ class BDMotoristasOpenHelper (
          */
         override fun onCreate(db: SQLiteDatabase?) {
 
+
         }
 
         /**
