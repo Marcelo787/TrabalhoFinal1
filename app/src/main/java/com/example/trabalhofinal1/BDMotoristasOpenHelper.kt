@@ -47,5 +47,6 @@ class BDMotoristasOpenHelper (
             requireNotNull(db)
 
             TabelaBDMotorista(db).cria()
+            TabelaBDMercadorias(db).cria()
         }
     }
