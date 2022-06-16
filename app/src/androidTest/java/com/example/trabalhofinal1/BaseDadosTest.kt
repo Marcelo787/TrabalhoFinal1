@@ -216,4 +216,81 @@ class BaseDadosTest {
 
         db.close()
     }
+
+    @Test
+    fun  consegueEliminarCliente() {
+        val db = getWritableDatabase()
+
+        val cliente = Cliente("SeverTrans","25421365","912546897")
+        insereCliente(db, cliente)
+
+        val registosEliminados = TabelaBDCliente(db).delete(
+            "${BaseColumns._ID}=?",
+            arrayOf("${cliente.id}"))
+
+        assertEquals(1, registosEliminados)
+
+        db.close()
+    }
+
+    @Test
+    fun  consegueEliminarMotorista() {
+        val db = getWritableDatabase()
+
+        val motorista = Motorista("Jusué Costa","30-jul-1990","Braga","24521534","912456329","jusuecosta@gmail.com")
+        insereMotorista(db, motorista)
+
+        val registosEliminados = TabelaBDMotorista(db).delete(
+            "${BaseColumns._ID}=?",
+            arrayOf("${motorista.id}"))
+
+        assertEquals(1, registosEliminados)
+
+        db.close()
+    }
+
+    @Test
+    fun  consegueEliminarMercadoria() {
+        val db = getWritableDatabase()
+
+        val cliente = Cliente("Transportes Antonio","53264585","916523459")
+        insereCliente(db, cliente)
+
+        val mercadoria = Mercadoria("Sapatos","15000","198", cliente.id)
+        insereMercadoria(db, mercadoria)
+
+        val registosEliminados = TabelaBDCliente(db).delete(
+            "${BaseColumns._ID}=?",
+            arrayOf("${mercadoria.id}"))
+
+        assertEquals(1, registosEliminados)
+
+        db.close()
+    }
+
+    @Test
+    fun  consegueEliminarViagem() {
+        val db = getWritableDatabase()
+
+        val cliente = Cliente("Transportes Quaresma","52314265","913214578")
+        insereCliente(db, cliente)
+
+        val mercadoria = Mercadoria("Barras de ferro","40000","200", cliente.id)
+        insereMercadoria(db, mercadoria)
+
+        val motorista = Motorista("Carlos Paiva","5-set-1994","Porto", "21234567","915423658","carlospaiva@gmail.com")
+        insereMotorista(db, motorista)
+
+        val viagem = Viagem("14-abr-2022","15-abr-2022","Porto","Algarve","Normal", mercadoria.id, motorista.id)
+        insereViagem(db, viagem)
+
+
+        val registosEliminados = TabelaBDViagem(db).delete(
+            "${BaseColumns._ID}=?",
+            arrayOf("${viagem.id}"))
+
+        assertEquals(1, registosEliminados)
+
+        db.close()
+    }
 }
