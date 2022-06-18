@@ -6,25 +6,21 @@ import android.provider.BaseColumns
 class TabelaBDViagem (db: SQLiteDatabase) : TabelaBD(db, NOME){
     override fun cria() {
         db.execSQL("CREATE TABLE $nome (${BaseColumns._ID} INTEGER PRIMARY KEY AUTOINCREMENT," +
-                " $CAMPO_NOME TEXT NOT NULL," +
-                " $CAMPO_DPARTIDA DATE NOT NULL,"+
-                " $CAMPO_DCHEGADA DATE NOT NULL," +
-                " $CAMPO_LCHEGADA TEXT NOT NULL," +
-                " $CAMPO_LPARTIDA TEXT NOT NULL)" +
-                "${CAMPO_MERCADORIA_ID} INTEGER NOT NULL, FOREIGN KEY (${CAMPO_MERCADORIA_ID}) REFERENCES ${TabelaBDMercadoria.NOME}(${BaseColumns._ID}) ON DELETE RESTRICT),"+
-                "${CAMPO_MOTORISTA_ID} INTEGER NOT NULL, FOREIGN KEY (${CAMPO_MOTORISTA_ID}) REFERENCES ${TabelaBDMotorista.NOME}(${BaseColumns._ID}) ON DELETE RESTRICT),"+
-                " $CAMPO_TIPO_SERVICO TEXT NOT NULL)")
+                "$CAMPO_NOME TEXT NOT NULL," +
+                "${CAMPO_MERCADORIA_VIAGEM_ID} INTEGER NOT NULL, FOREIGN KEY (${CAMPO_MERCADORIA_VIAGEM_ID}) REFERENCES ${TabelaBDMercadoriaViagem.NOME}(${BaseColumns._ID}) ON DELETE RESTRICT),"+
+                "${CAMPO_VIAGEM_MOTORISTA_ID} INTEGER NOT NULL, FOREIGN KEY (${CAMPO_VIAGEM_MOTORISTA_ID}) REFERENCES ${TabelaBDViagemMotorista.NOME}(${BaseColumns._ID}) ON DELETE RESTRICT),"+
+                "${CAMPO_PARTIDA_ID} INTEGER NOT NULL, FOREIGN KEY (${CAMPO_PARTIDA_ID}) REFERENCES ${TabelaBDPartida.NOME}(${BaseColumns._ID}) ON DELETE RESTRICT),"+
+                "${CAMPO_CHEGADA_ID} INTEGER NOT NULL, FOREIGN KEY (${CAMPO_CHEGADA_ID}) REFERENCES ${TabelaBDChegada.NOME}(${BaseColumns._ID}) ON DELETE RESTRICT),"+
+                "${CAMPO_SERVICOS_ID} INTEGER NOT NULL, FOREIGN KEY (${CAMPO_SERVICOS_ID}) REFERENCES ${TabelaBDServicos.NOME}(${BaseColumns._ID}) ON DELETE RESTRICT)")
     }
 
     companion object {
         const val NOME = "viagem"
         const val CAMPO_NOME = "nomeViagem"
-        const val CAMPO_DPARTIDA = "dataPartida"
-        const val CAMPO_DCHEGADA = "dataChegada"
-        const val CAMPO_LPARTIDA = "localPartida"
-        const val CAMPO_LCHEGADA = "localChegada"
-        const val CAMPO_TIPO_SERVICO = "localChegada"
-        const val CAMPO_MERCADORIA_ID = "MercadoriaID"
-        const val CAMPO_MOTORISTA_ID = "MotoristaID"
+        const val CAMPO_MERCADORIA_VIAGEM_ID = "Mercadoria_ViagemID"
+        const val CAMPO_VIAGEM_MOTORISTA_ID = "Viagem_MotoristaID"
+        const val CAMPO_PARTIDA_ID = "PartidaID"
+        const val CAMPO_CHEGADA_ID = "ChegadaID"
+        const val CAMPO_SERVICOS_ID = "ServicosID"
     }
 }

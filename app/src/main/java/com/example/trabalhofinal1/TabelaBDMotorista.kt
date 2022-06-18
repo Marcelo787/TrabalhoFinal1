@@ -9,10 +9,11 @@ class TabelaBDMotorista (db: SQLiteDatabase) : TabelaBD(db, NOME){
             "CREATE TABLE $nome (${BaseColumns._ID} INTEGER PRIMARY KEY AUTOINCREMENT," +
                     " $CAMPO_NOME TEXT NOT NULL," +
                     " $CAMPO_MORADA TEXT NOT NULL," +
-                    " $CAMPO_DATA_NASCIMENTO DATE NOT NULL," +
+                    " $CAMPO_DATA_NASCIMENTO LONG NOT NULL," +
                     " $CAMPO_CC TEXT NOT NULL," +
                     " $CAMPO_TELEMOVEL TEXT NOT NULL," +
-                    " $CAMPO_EMAIL TEXT NOT NULL)"
+                    " $CAMPO_EMAIL TEXT NOT NULL," +
+                    "$CAMPO_VIAGEM_MOTORISTA_ID INTEGER NOT NULL, FOREIGN KEY ($CAMPO_VIAGEM_MOTORISTA_ID) REFERENCES ${TabelaBDMercadoriaViagem.NOME}(${BaseColumns._ID}) ON DELETE RESTRICT)"
         )
     }
 
@@ -24,5 +25,6 @@ class TabelaBDMotorista (db: SQLiteDatabase) : TabelaBD(db, NOME){
         const val CAMPO_CC = "BI"
         const val CAMPO_TELEMOVEL = "telemovel"
         const val CAMPO_EMAIL = "email"
+        const val CAMPO_VIAGEM_MOTORISTA_ID = "ViagemMotorista"
     }
 }
