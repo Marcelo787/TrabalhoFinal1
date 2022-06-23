@@ -12,8 +12,21 @@ class BDViagemOpenHelper (context: Context?) : SQLiteOpenHelper(context, NOME, n
          * @param db The database.
          */
         override fun onCreate(db: SQLiteDatabase?) {
+            requireNotNull(db)
 
 
+            TabelaBDMotorista(db).cria()
+            TabelaBDMercadoria(db).cria()
+            TabelaBDCliente(db).cria()
+            TabelaBDPartida(db).cria()
+            TabelaBDChegada(db).cria()
+
+            /*
+            TabelaBDMercadoriaViagem(db).cria()
+            TabelaBDViagemMotorista(db).cria()
+            */
+
+            TabelaBDViagem(db).cria()
         }
 
         /**
@@ -39,12 +52,7 @@ class BDViagemOpenHelper (context: Context?) : SQLiteOpenHelper(context, NOME, n
          * @param newVersion The new database version.
          */
         override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-            requireNotNull(db)
 
-            TabelaBDMotorista(db).cria()
-            TabelaBDMercadoria(db).cria()
-            TabelaBDViagem(db).cria()
-            TabelaBDCliente(db).cria()
         }
 
         companion object {
