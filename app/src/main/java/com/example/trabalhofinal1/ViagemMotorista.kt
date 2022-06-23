@@ -5,7 +5,7 @@ import android.content.ContentValues
 data class ViagemMotorista(
     var viagemId: Long,
     var motoristaId: Long,
-    var id: Long = -1,
+    var id: Long = 1
 ) {
     fun toContentValues() : ContentValues {
         val valores = ContentValues()
