@@ -358,4 +358,169 @@ class BaseDadosTest {
         db.close()
     }
 
+    @Test
+    fun consegueLerCliente() {
+        val db = getWritableDatabase()
+
+        val cliente = Cliente("Teste11","24062022","963852741","Teste5@hotmail.com")
+        insereCliente(db, cliente)
+
+        val cursor = TabelaBDCliente(db).query(
+            TabelaBDCliente.TODAS_COLUNAS,
+            "${BaseColumns._ID}=?",
+            arrayOf("${cliente.id}"),
+            null,
+            null,
+            null
+        )
+
+        assertEquals(1, cursor.count)
+        assertTrue(cursor.moveToNext())
+
+        val clienteBD = Cliente.fromCursor(cursor)
+
+        assertEquals(cliente, clienteBD)
+
+        db.close()
+    }
+
+    @Test
+    fun consegueLerChegada() {
+        val db = getWritableDatabase()
+
+        val chegada = Chegada("Teste11","24062022")
+        insereChegada(db, chegada)
+
+        val cursor = TabelaBDChegada(db).query(
+            TabelaBDChegada.TODAS_COLUNAS,
+            "${BaseColumns._ID}=?",
+            arrayOf("${chegada.id}"),
+            null,
+            null,
+            null
+        )
+
+        assertEquals(1, cursor.count)
+        assertTrue(cursor.moveToNext())
+
+        val chegadaBD = Chegada.fromCursor(cursor)
+
+        assertEquals(chegada, chegadaBD)
+
+        db.close()
+    }
+
+    @Test
+    fun consegueLerPartida() {
+        val db = getWritableDatabase()
+
+        val partida = Partida("Teste11","24062022")
+        inserePartida(db, partida)
+
+        val cursor = TabelaBDPartida(db).query(
+            TabelaBDPartida.TODAS_COLUNAS,
+            "${BaseColumns._ID}=?",
+            arrayOf("${partida.id}"),
+            null,
+            null,
+            null
+        )
+
+        assertEquals(1, cursor.count)
+        assertTrue(cursor.moveToNext())
+
+        val partidaBD = Partida.fromCursor(cursor)
+
+        assertEquals(partida, partidaBD)
+
+        db.close()
+    }
+
+    @Test
+    fun consegueLerMercadoria() {
+        val db = getWritableDatabase()
+
+        val cliente = Cliente("Teste12","45576867","963741852","Teste9@hotmail.com")
+        insereCliente(db, cliente)
+
+        val mercadoria = Mercadoria("Teste11",56.65,53.57, cliente.id)
+        insereMercadoria(db, mercadoria)
+
+        val cursor = TabelaBDMercadoria(db).query(
+            TabelaBDMercadoria.TODAS_COLUNAS,
+            "${BaseColumns._ID}=?",
+            arrayOf("${mercadoria.id}"),
+            null,
+            null,
+            null
+        )
+
+        assertEquals(1, cursor.count)
+        assertTrue(cursor.moveToNext())
+
+        val mercadoriaBD = Mercadoria.fromCursor(cursor)
+
+        assertEquals(mercadoria, mercadoriaBD)
+
+        db.close()
+    }
+
+    @Test
+    fun consegueLerMotorista() {
+        val db = getWritableDatabase()
+
+        val cliente = Cliente("Teste12","45576867","963741852","Teste9@hotmail.com")
+        insereCliente(db, cliente)
+
+        val motorista = Motorista("Teste11","23051999","Rua Camoes","34565467","963753741","Teste7@gmail.com")
+        insereMotorista(db, motorista)
+
+        val cursor = TabelaBDMotorista(db).query(
+            TabelaBDMotorista.TODAS_COLUNAS,
+            "${BaseColumns._ID}=?",
+            arrayOf("${motorista.id}"),
+            null,
+            null,
+            null
+        )
+
+        assertEquals(1, cursor.count)
+        assertTrue(cursor.moveToNext())
+
+        val motoristaBD = Motorista.fromCursor(cursor)
+
+        assertEquals(motorista, motoristaBD)
+
+        db.close()
+    }
+
+    @Test
+    fun consegueLerViagem() {
+        val db = getWritableDatabase()
+
+        val cliente = Cliente("Teste12","45576867","963741852","Teste9@hotmail.com")
+        insereCliente(db, cliente)
+
+        val viagem = Viagem("Teste15")
+        insereViagem(db, viagem)
+
+        val cursor = TabelaBDViagem(db).query(
+            TabelaBDViagem.TODAS_COLUNAS,
+            "${BaseColumns._ID}=?",
+            arrayOf("${viagem.id}"),
+            null,
+            null,
+            null
+        )
+
+        assertEquals(1, cursor.count)
+        assertTrue(cursor.moveToNext())
+
+        val viagemBD = Viagem.fromCursor(cursor)
+
+        assertEquals(viagem, viagemBD)
+
+        db.close()
+    }
+
 }

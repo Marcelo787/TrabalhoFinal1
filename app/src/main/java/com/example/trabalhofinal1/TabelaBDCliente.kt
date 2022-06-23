@@ -19,5 +19,7 @@ class TabelaBDCliente (db: SQLiteDatabase) : TabelaBD(db, NOME) {
         const val CAMPO_CC = "BI"
         const val CAMPO_TELEMOVEL = "telemovel"
         const val CAMPO_EMAIL = "email"
+
+        val TODAS_COLUNAS = arrayOf(CAMPO_NOME,CAMPO_CC,CAMPO_TELEMOVEL,CAMPO_EMAIL)
     }
 }

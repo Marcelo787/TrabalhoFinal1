@@ -1,6 +1,8 @@
 package com.example.trabalhofinal1
 
 import android.content.ContentValues
+import android.database.Cursor
+import android.provider.BaseColumns
 
 data class Motorista(
     var nome: String,
@@ -21,5 +23,27 @@ data class Motorista(
         valores.put(TabelaBDMotorista.CAMPO_EMAIL, email)
 
         return valores
+    }
+
+    companion object {
+        fun fromCursor(cursor: Cursor): Motorista {
+            val posId = cursor.getColumnIndex(BaseColumns._ID)
+            val posNome = cursor.getColumnIndex(TabelaBDMotorista.CAMPO_NOME)
+            val posDataNascimento = cursor.getColumnIndex(TabelaBDMotorista.CAMPO_DATA_NASCIMENTO)
+            val posMorada = cursor.getColumnIndex(TabelaBDMotorista.CAMPO_MORADA)
+            val posCC = cursor.getColumnIndex(TabelaBDMotorista.CAMPO_CC)
+            val posTelemovel = cursor.getColumnIndex(TabelaBDMotorista.CAMPO_TELEMOVEL)
+            val posEmail = cursor.getColumnIndex(TabelaBDMotorista.CAMPO_EMAIL)
+
+            val id = cursor.getLong(posId)
+            val nome = cursor.getString(posNome)
+            val dataNascimento = cursor.getString(posDataNascimento)
+            val morada = cursor.getString(posMorada)
+            val cc = cursor.getString(posCC)
+            val telemovel = cursor.getString(posTelemovel)
+            val email = cursor.getString(posEmail)
+
+            return Motorista(nome,dataNascimento,morada,cc,telemovel,email, id)
+        }
     }
 }

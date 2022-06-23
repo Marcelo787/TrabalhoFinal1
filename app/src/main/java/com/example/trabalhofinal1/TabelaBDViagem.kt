@@ -12,5 +12,6 @@ class TabelaBDViagem (db: SQLiteDatabase) : TabelaBD(db, NOME){
         const val NOME = "viagem"
         const val CAMPO_NOME = "NOME"
 
+        val TODAS_COLUNAS = arrayOf(CAMPO_NOME)
     }
 }

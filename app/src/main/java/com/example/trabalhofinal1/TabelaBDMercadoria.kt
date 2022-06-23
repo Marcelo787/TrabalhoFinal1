@@ -18,5 +18,8 @@ class TabelaBDMercadoria (db: SQLiteDatabase) : TabelaBD(db, NOME){
         const val CAMPO_PESO = "peso"
         const val CAMPO_DIMENSOES = "dimensoes"
         const val CAMPO_CLIENTE_ID = "clienteID"
+
+        val TODAS_COLUNAS = arrayOf(
+            CAMPO_TIPO_MERCADORIA,CAMPO_PESO,CAMPO_DIMENSOES,CAMPO_CLIENTE_ID)
     }
 }

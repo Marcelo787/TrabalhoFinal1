@@ -16,5 +16,7 @@ class TabelaBDPartida (db: SQLiteDatabase) : TabelaBD(db, NOME){
         const val NOME = "partida"
         const val CAMPO_LOCAL_RECOLHA = "localPartida"
         const val CAMPO_DATA_PARTIDA = "dataPartida"
+
+        val TODAS_COLUNAS = arrayOf(CAMPO_LOCAL_RECOLHA,CAMPO_DATA_PARTIDA)
     }
 }

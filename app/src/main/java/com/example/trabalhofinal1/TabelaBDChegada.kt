@@ -16,5 +16,7 @@ class TabelaBDChegada (db: SQLiteDatabase) : TabelaBD(db, NOME){
         const val NOME = "chegada"
         const val CAMPO_LOCAL_ENTREGA = "localChegada"
         const val CAMPO_DATA_CHEGADA = "dataChegada"
+
+        val TODAS_COLUNAS = arrayOf(CAMPO_LOCAL_ENTREGA,CAMPO_DATA_CHEGADA)
     }
 }
