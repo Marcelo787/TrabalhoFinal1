@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuPrincipalFragment">
+
+    <Button
+        android:id="@+id/buttonChegada"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/chegada"
+        app:layout_constraintEnd_toEndOf="@+id/buttonClient"
+        app:layout_constraintStart_toStartOf="@+id/buttonClient"
+        app:layout_constraintTop_toBottomOf="@+id/buttonClient" />
+
+    <Button
+        android:id="@+id/buttonClient"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/client"
+        app:layout_constraintEnd_toEndOf="@+id/buttonMercadoria"
+        app:layout_constraintStart_toStartOf="@+id/buttonMercadoria"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMercadoria" />
+
+    <Button
+        android:id="@+id/buttonMercadoria"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/mercadoria"
+        app:layout_constraintEnd_toEndOf="@+id/buttonMotorista"
+        app:layout_constraintStart_toStartOf="@+id/buttonMotorista"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMotorista" />
+
+    <Button
+        android:id="@+id/buttonMotorista"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/motorista"
+        app:layout_constraintEnd_toEndOf="@+id/buttonPartida"
+        app:layout_constraintStart_toStartOf="@+id/buttonPartida"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPartida" />
+
+    <Button
+        android:id="@+id/buttonPartida"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/partida"
+        app:layout_constraintEnd_toEndOf="@+id/buttonViagem"
+        app:layout_constraintStart_toStartOf="@+id/buttonViagem"
+        app:layout_constraintTop_toBottomOf="@+id/buttonViagem" />
+
+    <Button
+        android:id="@+id/buttonViagem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/viagem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
