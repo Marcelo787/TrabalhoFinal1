@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/MenuPrincipalFragment">
+
+    <fragment
+        android:id="@+id/MenuPrincipalFragment"
+        android:name="com.example.trabalhofinal1.MenuPrincipalFragment"
+        android:label="@string/menu_principal_label"
+        tools:layout="@layout/fragment_menu_principal">
+
+        <action
+            android:id="@+id/action_MenuPrincipal_to_ListaChegadaFragment"
+            app:destination="@id/ListaChegadaFragment" />
+
+        <action
+            android:id="@+id/action_MenuPrincipal_to_ListaClienteFragment"
+            app:destination="@id/ListaClienteFragment" />
+
+        <action
+            android:id="@+id/action_MenuPrincipal_to_ListaMercadoriaFragment"
+            app:destination="@id/ListaMercadoriaFragment" />
+
+        <action
+            android:id="@+id/action_MenuPrincipal_to_ListaMotoristaFragment"
+            app:destination="@id/ListaMotoristaFragment" />
+
+        <action
+            android:id="@+id/action_MenuPrincipal_to_ListaPartidaFragment"
+            app:destination="@id/ListaPartidaFragment" />
+
+        <action
+            android:id="@+id/action_MenuPrincipal_to_ListaViagemFragment"
+            app:destination="@id/ListaViagemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ListaChegadaFragment"
+        android:name="com.example.trabalhofinal1.ListaChegadaFragment"
+        android:label="@string/lista_chegadas_label"
+        tools:layout="@layout/fragment_lista_chegada">
+
+        <action
+            android:id="@+id/action_ListaChegadas_to_MenuPrincipal"
+            app:destination="@id/MenuPrincipalFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ListaClienteFragment"
+        android:name="com.example.trabalhofinal1.ListaClienteFragment"
+        android:label="@string/lista_clientes_label"
+        tools:layout="@layout/fragment_lista_cliente">
+
+        <action
+            android:id="@+id/action_ListaClientes_to_MenuPrincipal"
+            app:destination="@id/MenuPrincipalFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ListaMercadoriaFragment"
+        android:name="com.example.trabalhofinal1.ListaMercadoriaFragment"
+        android:label="@string/lista_mercadorias_label"
+        tools:layout="@layout/fragment_lista_mercadoria">
+
+        <action
+            android:id="@+id/action_ListaMercadorias_to_MenuPrincipal"
+            app:destination="@id/MenuPrincipalFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ListaMotoristaFragment"
+        android:name="com.example.trabalhofinal1.ListaMotoristaFragment"
+        android:label="@string/lista_motoristas_label"
+        tools:layout="@layout/fragment_lista_motorista">
+
+        <action
+            android:id="@+id/action_ListaMotoristas_to_MenuPrincipal"
+            app:destination="@id/MenuPrincipalFragment" />
+
+        <action
+            android:id="@+id/action_lista_motoristas_to_editar_motorista"
+            app:destination="@id/EditarMotoristaFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/EditarMotoristaFragment"
+        android:name="com.example.trabalhofinal1.EditarMotoristaFragment"
+        tools:layout="@layout/fragment_editar_motorista">
+        <action
+            android:id="@+id/action_editar_motorista_to_lista_motoristas"
+            app:destination="@id/ListaMotoristaFragment" />
+        <argument
+            android:name="motorista"
+            app:argType="com.example.trabalhofinal1.Motorista"
+            app:nullable="true"
+            android:defaultValue="@null" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/ListaPartidaFragment"
+        android:name="com.example.trabalhofinal1.ListaPartidaFragment"
+        android:label="@string/lista_partidas_label"
+        tools:layout="@layout/fragment_lista_partida">
+
+        <action
+            android:id="@+id/action_ListaPartidas_to_MenuPrincipal"
+            app:destination="@id/MenuPrincipalFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ListaViagemFragment"
+        android:name="com.example.trabalhofinal1.ListaViagemFragment"
+        android:label="@string/lista_viagens_label"
+        tools:layout="@layout/fragment_lista_viagem">
+
+        <action
+            android:id="@+id/action_ListaViagens_to_MenuPrincipal"
+            app:destination="@id/MenuPrincipalFragment" />
+    </fragment>
+
+</navigation>
