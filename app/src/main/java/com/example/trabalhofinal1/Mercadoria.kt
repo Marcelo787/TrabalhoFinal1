@@ -4,6 +4,7 @@ import android.content.ContentValues
 import android.database.Cursor
 import android.icu.number.IntegerWidth
 import android.provider.BaseColumns
+import java.io.Serializable
 
 data class Mercadoria(
     var tipoMercadoria: String,
@@ -11,7 +12,7 @@ data class Mercadoria(
     var dimensoes: Double,
     var clienteId: Long,
     var id: Long = 1
-) {
+): Serializable {
     fun toContentValues() : ContentValues {
         val valores = ContentValues()
         valores.put(TabelaBDMercadoria.CAMPO_TIPO_MERCADORIA, tipoMercadoria)
