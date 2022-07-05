@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="textViewNome" type="id" />
+    <item name="textViewDataNascimento" type="id" />
+    <item name="textViewMorada" type="id" />
+    <item name="textViewCc" type="id" />
+    <item name="textViewTelemovel" type="id" />
+    <item name="textViewEmail" type="id" />
+    <item name="textViewTipoMercadoria" type="id" />
+    <item name="textViewLocalRecolha" type="id" />
+    <item name="textViewDataPartida" type="id" />
+    <item name="textViewDataPartida" type="id" />
+    <item name="textViewLocalEntrega" type="id" />
+    <item name="textViewDataChegada" type="id" />
+    <item name="action_MenuPrincipal_to_ListaLivros" type="id" />
+    <item name="action_MenuPrincipal_to_ListaMotorista" type="id" />
+    <item name="action_editar_motorista_to_lista_motoristas" type="id" />
+    <item name="action_editar_motorista_to_lista_motoristas" type="id" />
+</resources>

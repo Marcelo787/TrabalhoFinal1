@@ -3,7 +3,35 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/TrabalhoFinal1/app/src/main/res/drawable/ic_add.xml" value="0.1" />
         <entry key="..\:/Android/TrabalhoFinal1/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/Android/TrabalhoFinal1/app/src/main/res/layout/content_main.xml" value="0.1" />
+        <entry key="..\:/Android/TrabalhoFinal1/app/src/main/res/layout/fragment_editar_chegada.xml" value="0.24592391304347827" />
+        <entry key="..\:/Android/TrabalhoFinal1/app/src/main/res/layout/fragment_editar_cliente.xml" value="0.24592391304347827" />
+        <entry key="..\:/Android/TrabalhoFinal1/app/src/main/res/layout/fragment_editar_mercadoria.xml" value="0.24592391304347827" />
+        <entry key="..\:/Android/TrabalhoFinal1/app/src/main/res/layout/fragment_editar_motorista.xml" value="0.1" />
+        <entry key="..\:/Android/TrabalhoFinal1/app/src/main/res/layout/fragment_editar_partida.xml" value="0.24592391304347827" />
+        <entry key="..\:/Android/TrabalhoFinal1/app/src/main/res/layout/fragment_editar_viagem.xml" value="0.24592391304347827" />
+        <entry key="..\:/Android/TrabalhoFinal1/app/src/main/res/layout/fragment_lista_chegada.xml" value="0.1" />
+        <entry key="..\:/Android/TrabalhoFinal1/app/src/main/res/layout/fragment_lista_chegadas.xml" value="0.259375" />
+        <entry key="..\:/Android/TrabalhoFinal1/app/src/main/res/layout/fragment_lista_cliente.xml" value="0.1" />
+        <entry key="..\:/Android/TrabalhoFinal1/app/src/main/res/layout/fragment_lista_clientes.xml" value="0.259375" />
+        <entry key="..\:/Android/TrabalhoFinal1/app/src/main/res/layout/fragment_lista_mercadoria.xml" value="0.1" />
+        <entry key="..\:/Android/TrabalhoFinal1/app/src/main/res/layout/fragment_lista_mercadoria_viagem.xml" value="0.1" />
+        <entry key="..\:/Android/TrabalhoFinal1/app/src/main/res/layout/fragment_lista_motorista.xml" value="0.1" />
+        <entry key="..\:/Android/TrabalhoFinal1/app/src/main/res/layout/fragment_lista_partida.xml" value="0.1" />
+        <entry key="..\:/Android/TrabalhoFinal1/app/src/main/res/layout/fragment_lista_viagem.xml" value="0.1" />
+        <entry key="..\:/Android/TrabalhoFinal1/app/src/main/res/layout/fragment_lista_viagem_motorista.xml" value="0.1" />
+        <entry key="..\:/Android/TrabalhoFinal1/app/src/main/res/layout/fragment_menu_principal.xml" value="0.1" />
+        <entry key="..\:/Android/TrabalhoFinal1/app/src/main/res/layout/item_chegada.xml" value="0.24592391304347827" />
+        <entry key="..\:/Android/TrabalhoFinal1/app/src/main/res/layout/item_cliente.xml" value="0.24592391304347827" />
+        <entry key="..\:/Android/TrabalhoFinal1/app/src/main/res/layout/item_mercadoria.xml" value="0.24592391304347827" />
+        <entry key="..\:/Android/TrabalhoFinal1/app/src/main/res/layout/item_motorista.xml" value="0.24592391304347827" />
+        <entry key="..\:/Android/TrabalhoFinal1/app/src/main/res/layout/item_partida.xml" value="0.24592391304347827" />
+        <entry key="..\:/Android/TrabalhoFinal1/app/src/main/res/layout/item_viagem.xml" value="0.24592391304347827" />
+        <entry key="..\:/Android/TrabalhoFinal1/app/src/main/res/menu/menu_edicao.xml" value="0.1" />
+        <entry key="..\:/Android/TrabalhoFinal1/app/src/main/res/menu/menu_lista.xml" value="0.1" />
+        <entry key="..\:/Android/TrabalhoFinal1/app/src/main/res/menu/menu_main.xml" value="0.259375" />
       </map>
     </option>
   </component>
