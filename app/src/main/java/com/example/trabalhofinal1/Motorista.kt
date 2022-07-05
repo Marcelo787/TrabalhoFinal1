@@ -3,6 +3,7 @@ package com.example.trabalhofinal1
 import android.content.ContentValues
 import android.database.Cursor
 import android.provider.BaseColumns
+import java.io.Serializable
 
 data class Motorista(
     var nome: String,
@@ -12,7 +13,7 @@ data class Motorista(
     var telemovel: String,
     var email: String,
     var id: Long = 1
-) {
+):Serializable{
     fun toContentValues() : ContentValues {
         val valores = ContentValues()
         valores.put(TabelaBDMotorista.CAMPO_NOME, nome)
